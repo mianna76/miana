@@ -1,0 +1,366 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 12px;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,.65) 0 3px, transparent 4px),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,.55) 0 3px, transparent 4px),
+        #f8d5e0;
+    background-size: 28px 28px;
+    color: #80684d;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* MAIN WEBSITE FRAME */
+.site {
+    width: min(1120px, 100%);
+    margin: auto;
+    padding: 12px;
+    background: #fffbea;
+    border: 3px solid #e5b4c8;
+    
+    border-radius: 12px;
+    box-shadow:
+        0 0 0 5px rgba(255,255,255,.55),
+        0 5px 20px rgba(130,80,100,.12);
+}
+
+/* HEADER */
+.header {
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    
+    padding: 0 24px 20px;
+    border: 2px solid #aaa96d;
+    border-radius: 5px;
+    background:
+        radial-gradient(circle at 15% 35%, #fff 0 8%, transparent 8.5%),
+        radial-gradient(circle at 80% 25%, #f4aeca 0 11%, transparent 11.5%),
+        linear-gradient(135deg, #fffdf1, #f8c5d8 58%, #fff1d8);
+}
+
+/* Decorative header pattern */
+.header::before {
+    content: "♡  PASTEL PERSONAL WEBSITE  ♡";
+    position: absolute;
+    top: 17px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #efa7c2;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px white;
+}
+
+.header::after {
+    content: "✿ ｡･ﾟﾟ･  ✿ ｡･ﾟﾟ･  ✿";
+    position: absolute;
+    right: 25px;
+    bottom: 12px;
+    color: #c4dd79;
+    font-size: 22px;
+}
+
+.site-title {
+    position: relative;
+    z-index: 2;
+    color: #b8d66e;
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+    text-shadow:
+        2px 2px #8da94e,
+        3px 3px white;
+}
+
+/* THREE-COLUMN LAYOUT */
+.layout {
+    display: grid;
+    grid-template-columns: 265px minmax(0, 1fr) 325px;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: start;
+}
+
+.profile {
+    grid-column: 1;
+}
+
+.layout > .center-column {
+    grid-column: 2;
+}
+
+.layout > .sidebar {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* GENERAL BOX */
+.panel {
+    background: #fffef0;
+    border: 2px solid #aaa96d;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* LEFT PROFILE */
+.profile-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #dce7b0;
+    border: 1px solid #dfd5a7;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.lace {
+    margin: 13px 0;
+    padding: 4px 0;
+    text-align: center;
+    color: #e892b2;
+    font-size: 19px;
+    border-top: 2px dotted #e892b2;
+    border-bottom: 2px dotted #e892b2;
+}
+
+.profile p {
+    margin: 9px 0;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.profile strong {
+    color: #9b7956;
+}
+
+/* CENTER WELCOME */
+.welcome {
+    min-height: 275px;
+    padding: 14px;
+    text-align: center;
+}
+
+.welcome h1 {
+    margin: 0 0 8px;
+    color: #efa9c1;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px #8bb7c5;
+}
+
+.welcome h1 span {
+    color: #8eb9c7;
+}
+
+.welcome p {
+    max-width: 520px;
+    margin: auto;
+    font-size: 10px;
+    line-height: 1.35;
+}
+
+.pixel-art {
+    width: 90px;
+    height: 90px;
+    margin: 16px auto 8px;
+    display: grid;
+    place-items: center;
+    font-size: 43px;
+}
+
+.visitor {
+    margin-top: 5px;
+    padding-top: 7px;
+    border-top: 1px solid #aaa96d;
+    color: #df94b2;
+    font-family: Georgia, serif;
+}
+
+/* SOCIAL BOX */
+.social {
+    min-height: 185px;
+    margin-top: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.social a {
+    color: #b67e96;
+    text-decoration: underline;
+}
+
+.social-icon {
+    margin-top: 18px;
+    font-size: 58px;
+}
+
+/* EXTRA CONTENT */
+.content-box {
+    margin-top: 10px;
+    min-height: 160px;
+    text-align: center;
+}
+
+.content-box h2 {
+    margin-top: 5px;
+    color: #dfa0b7;
+}
+
+.content-box p {
+    line-height: 1.5;
+}
+
+/*Snackbox*/
+.Snackbox {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.Snackbox1 {
+    width: 100%;
+    padding: 10px 15px 20px;
+    border: 2px solid #aaa96d;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.Snackbox1 h2 {
+    margin: 0 0 15px;
+    text-align: center;
+    color: #80684d;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+.food-grid img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+/* RIGHT SIDEBAR */
+.sidebar {
+    padding: 8px;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.bow-divider {
+    margin: -3px 0 7px;
+    text-align: center;
+    color: #8ca85b;
+    font-size: 29px;
+    letter-spacing: 5px;
+}
+
+.mini-art {
+    height: 125px;
+    margin-bottom: 8px;
+    display: grid;
+    place-items: center;
+    background: #faf0df;
+    border: 1px dashed #d4bd91;
+    font-size: 55px;
+}
+
+/* NAVIGATION BUTTONS */
+.nav-link {
+    display: block;
+    margin: 7px 0;
+    padding: 9px 12px;
+    border: 2px solid #b8c987;
+    border-radius: 8px;
+    background: linear-gradient(#eef5d1, #d8e8b6);
+    color: #7d9056;
+    font-weight: bold;
+    transition: .2s ease;
+    box-shadow: inset 0 1px rgba(255,255,255,.9);
+}
+
+.nav-link::before {
+    content: "✿ ";
+    color: #d77fa9;
+}
+
+.nav-link:hover {
+    transform: translateX(4px);
+    background: #f9e5bc;
+    color: #9b7850;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 10px;
+    padding: 14px;
+    text-align: center;
+    border: 2px solid #aaa96d;
+    background: #fffef0;
+    color: #c68aa5;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    body {
+        padding: 5px;
+    }
+
+    .site {
+        padding: 7px;
+    }
+
+    .header {
+        height: 125px;
+    }
+
+    .header::before {
+        font-size: 16px;
+    }
+
+    .site-title {
+        font-size: 25px;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        grid-column: auto;
+    }
+
+    .profile-image {
+        height: 280px;
+    }
+}
